@@ -1,0 +1,102 @@
+body{
+background-color:#CCCCCC;
+padding:0px;
+margin:0px;
+font-family:Arial, sans-serif;
+color:#000000;
+font-size:15px;
+}
+.top{
+width:100%;
+background-image:url("images/top_bg.jpg");
+background-repeat:repeat-x;
+color:#FFFFFF;
+height:150px;
+}
+.top img{
+float:left;
+margin-right:20px;
+}
+
+.content{
+width:90%;
+margin-left:5%;
+margin-right:5%;
+}
+.cont{
+background-color:#FFFFFF;
+
+}
+.cont_head{
+background-color:#EEEEEE;
+}
+.cont_foot{
+background-color:#EEEEEE;
+}
+
+.nav{
+width:100%;
+}
+
+.navpad{
+background:url(images/blockdefault.gif) center center repeat-x;
+height:30px;
+border-top: 1px solid #FFF;
+border-bottom: 1px solid #FFF;
+}
+
+body { behavior: url(includes/csshover.htc); }
+ul {
+    list-style: none;
+	padding:0px;
+	margin:0px;
+}
+
+ul li {
+    border-right: 1px solid #FFF;
+	border-top: 1px solid #FFF;
+	border-bottom: 1px solid #FFF;
+    float: left;
+    position: relative;
+}
+
+ul li ul {
+    list-style: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    display: none;
+    width: 109px;
+    border-top: 1px solid #FFF;
+	border-left: 1px solid #FFF;
+}
+
+ul li ul li:hover ul {
+    display: block;
+    position: absolute;
+    left: 140px;
+    top: -1px;
+    border-left: 1px solid #FFF;
+	border-top: 1px solid #FFF;
+	border-bottom: 1px solid #FFF;
+}
+
+ul a, ul a:visited {
+    color: #FFF;
+    text-decoration: none;
+    display: block;
+    padding: 5px 5px 5px 10px;
+    width: 109px;
+	background:url(images/blockdefault.gif) center center repeat-x;
+	height:20px;
+}
+
+ul a:hover {
+    color: #4BD8FF;
+    text-decoration: none;
+    background:url(images/blockactive.gif) center center repeat-x;
+}
+
+ul li:hover ul { display: block; }
+
+ul li:hover ul li ul { display: none; }
