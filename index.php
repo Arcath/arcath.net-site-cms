@@ -12,10 +12,9 @@ include('system/load.php');
 <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-<div class="top"><img src="images/banner.gif" />Username: ....<br />
-Password:...</div>
+<div class="top"><img src="images/banner.gif" /><?php echo(topbox()); ?></div>
 <div class="nav">
-<ul><li><a href="?mod=1">Home</a></li><li><a href="?mod=12">Community</a><ul><li><a href="?mod=12">Forums</a><li><a href="?mod=61">Staff List</a></ul></li></li></li></li></li></li></li><li><a href="?mod=5">Login</a></li><li><a href="?mod=2">Register</a></li><li><a href="?mod=68">Help Desk</a></li></ul>
+<?php echo($nav->draw(0)); ?>
 <div class="navpad"></div>
 </div>
 <div class="content">

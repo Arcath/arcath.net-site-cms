@@ -18,6 +18,10 @@ float:left;
 margin-right:20px;
 }
 
+.topcont{
+	padding-top:40px;
+}
+
 .content{
 width:90%;
 margin-left:5%;
