@@ -1,5 +1,6 @@
 <?php
 session_start();
+$starttime=microtime();
 if($_GET['var']){
 	$page=$_GET['var'];
 }else{
@@ -28,7 +29,11 @@ if($ums->cansee($pageid)){
 	echo('You do not have permission to view this page!');
 }
 ?></div>
-	<div class="cont_foot">&copy; Arcath.net</div>
+	<div class="cont_foot">&copy; Arcath.net<br /><?php
+$endtime=microtime();
+$diff=$endtime-$starttime;
+echo('Page loaded in '.$diff.'ms');
+?></div>
 </div>
 </body>
 </html>
