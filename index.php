@@ -1,4 +1,5 @@
 <?php
+session_start();
 if($_GET['var']){
 	$page=$_GET['var'];
 }else{
@@ -18,8 +19,8 @@ include('system/load.php');
 <div class="navpad"></div>
 </div>
 <div class="content">
-	<div class="cont_head"><?php echo($page); ?></div>
-	<div class="cont">CONTENT</div>
+	<div class="cont_head"><?php echo($content->title($page)); ?></div>
+	<div class="cont"><?php echo($content->show($page)); ?></div>
 	<div class="cont_foot">&copy; Arcath.net</div>
 </div>
 </body>
