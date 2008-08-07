@@ -20,7 +20,14 @@ include('system/load.php');
 </div>
 <div class="content">
 	<div class="cont_head"><?php echo($content->title($page)); ?></div>
-	<div class="cont"><?php echo($content->show($page)); ?></div>
+	<div class="cont"><?php 
+$pageid=$db->getvalue('id','pages','sname',$page);
+if($ums->cansee($pageid)){
+	echo($content->show($page)); 
+}else{
+	echo('You do not have permission to view this page!');
+}
+?></div>
 	<div class="cont_foot">&copy; Arcath.net</div>
 </div>
 </body>

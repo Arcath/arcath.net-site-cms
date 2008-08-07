@@ -1,14 +1,19 @@
 <?php
 class nav{
 	function draw($menu){
-		global $db, $nav;
+		global $db, $nav, $ums;
 		$out="<ul>\n";
 		$result=$db->query("SELECT * FROM `{PREFIX}nav` WHERE `start` = 1 AND `menu` = $menu LIMIT 1");
 		while($row=mysql_fetch_array($result)){
 			$next=$row['id'];
 		}		
 		while($next!=0){
-			$out.=$nav->linkgen($next);
+			$pageid=$db->getvalue('id','pages','sname',$db->getvalue('target','nav','id',$next));
+			if($pageid!=0){
+				if($ums->cansee($pageid)){
+					$out.=$nav->linkgen($next);
+				}
+			}
 			$next=$db->getvalue('next','nav','id',$next);
 		}
 		$out.="</ul>\n";
