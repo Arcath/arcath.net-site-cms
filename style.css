@@ -29,7 +29,15 @@ margin-right:5%;
 }
 .cont{
 background-color:#FFFFFF;
-
+}
+.cont p{
+margin:0px;
+}
+.cont form{
+margin:0px;
+}
+.cont ul{
+margin:0px;
 }
 .cont_head{
 background-color:#EEEEEE;
@@ -50,14 +58,23 @@ border-top: 1px solid #FFF;
 border-bottom: 1px solid #FFF;
 }
 
+a, a:visited {
+color:#0055CC;
+text-decoration:none;
+}
+
+a:hover {
+color:#0000FF;
+}
+
 body { behavior: url(includes/csshover.htc); }
-ul {
+.nav ul {
     list-style: none;
 	padding:0px;
 	margin:0px;
 }
 
-ul li {
+.nav ul li {
     border-right: 1px solid #FFF;
 	border-top: 1px solid #FFF;
 	border-bottom: 1px solid #FFF;
@@ -65,7 +82,7 @@ ul li {
     position: relative;
 }
 
-ul li ul {
+.nav ul li ul {
     list-style: none;
     position: absolute;
     left: 0;
@@ -76,7 +93,7 @@ ul li ul {
 	border-left: 1px solid #FFF;
 }
 
-ul li ul li:hover ul {
+.nav ul li ul li:hover ul {
     display: block;
     position: absolute;
     left: 140px;
@@ -86,7 +103,7 @@ ul li ul li:hover ul {
 	border-bottom: 1px solid #FFF;
 }
 
-ul a, ul a:visited {
+.nav ul a, ul a:visited {
     color: #FFF;
     text-decoration: none;
     display: block;
@@ -96,12 +113,12 @@ ul a, ul a:visited {
 	height:20px;
 }
 
-ul a:hover {
+.nav ul a:hover {
     color: #4BD8FF;
     text-decoration: none;
     background:url(images/blockactive.gif) center center repeat-x;
 }
 
-ul li:hover ul { display: block; }
+.nav ul li:hover ul { display: block; }
 
-ul li:hover ul li ul { display: none; }
+.nav ul li:hover ul li ul { display: none; }

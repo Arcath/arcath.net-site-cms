@@ -36,5 +36,5 @@ Class db{
 	}	
 }
 $db=new db;
-$db->connect('localhost','cms','arcath','cms');
+$db->connect('localhost','root','','cms');
 ?>
